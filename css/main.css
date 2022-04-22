@@ -24,16 +24,16 @@ body {
 }
 
 
-.header-2 {
+.header-2, .p-header {
     text-align: center;
 }
-.header-2 h2 {
+.header-2 h2, .p-header h2 {
     font-size: 50px;
     letter-spacing: -4px;
     margin: 0;
     color: var(--mainColor);
 }
-.header-2 p {
+.header-2 p, .p-header p {
     color: #222222;
     margin-top: -2px;
 }
@@ -237,6 +237,64 @@ z-index: -1;
     margin: 5px;
 }
 /* End services */
+
+/* start portfolio*/
+
+.p-container {
+    align-items: center;
+    background-color: var(--mainBackColor);
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.p-projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+}
+.p-projects .project-item {
+    width: 300px;
+    height: auto;
+    justify-self: center;
+}
+.p-projects .project-item img {
+    width: 100%;
+    height: auto;
+
+}
+.p-projects .project-item h2 {
+    color: var(--mainColor);
+
+}
+.p-container .p-more {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.p-container .p-more input {
+    outline: none;
+    border-top: 3px solid var(--mainColor);
+    border-bottom:  1px solid var(--mainColor);
+    border-right: none;
+    border-left: none;
+    width: 150px;
+    height: 50px;
+    background-color: white;
+    border-radius: 5px;
+    color: var(--mainColor);
+    cursor: pointer;
+    margin-top: 50px;
+}
+.p-container .p-more input:active {
+    border: 3px solid var(--mainColor);
+}
+
+
+
+
+/* end portfolio*/
+
 
 /*media queries start*/
 
