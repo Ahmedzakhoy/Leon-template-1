@@ -24,18 +24,22 @@ body {
 }
 
 
-.header-2, .p-header, .about-header {
+.header-2, .p-header, .about-header, .contact-header {
     text-align: center;
 }
-.header-2 h2, .p-header h2, .about-header h2 {
+.header-2 h2, .p-header h2, .about-header h2, .contact-header h2 {
     font-size: 50px;
     letter-spacing: -4px;
     margin: 0;
     color: var(--mainColor);
 }
-.header-2 p, .p-header p, .about-header p {
+.header-2 p, .p-header p, .about-header p, .contact-header p {
     color: #222222;
     margin-top: -2px;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 /* global variables end */
 
@@ -347,6 +351,57 @@ margin-bottom: 50px;
 
 /* End about section  */
 
+/*Start contact section*/
+.contact .contact-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--mainBackColor);
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.contact .contact-container p:first-child {
+    color: var(--mainFootColor);
+    margin-bottom: 10px;
+
+}
+.contact .contact-container p:nth-child(2) {
+    color: var(--mainColor);
+    margin-bottom: 30px;
+}
+.contact .contact-container div:last-child {
+    color: var(--mainFootColor);
+}
+.contact .contact-container p {
+    margin: 0;
+    font-size: 20px;
+}
+.contact .contact-container i {
+    display: inline-block;
+    font-size: 20px;
+}
+.contact .contact-container div p {
+    display: inline-block;
+}
+/*END contact section*/
+
+/* Start footer section */
+footer {
+    background-color: var(--mainFootColor);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+footer .copy-right {
+    color: white;
+    font-size: 15px;
+}
+footer .copy-right span {
+    color: var(--mainColor);
+    font-weight: 800;
+}
+/* END footer section */
 /*media queries start*/
 
 /* // Small devices (smallest devices) */
@@ -418,9 +473,26 @@ justify-self: center;
         text-align: center;
     }
     .services .container .serv p {
-        width: 250px;
+        width: 230px;
         margin: auto;
         text-align: center;
+    }
+    .services .container .img::before {
+        display: none;
+    }
+    .services .container .serv i {
+        font-size: 40px;
+    }
+    .services .container .img {
+        width: 250px;
+    }
+    .services .container .serv, .services .container .t2{
+        width: 300px;
+    }
+    }
+    @media (max-width: 500px) {
+    .contact .contact-container p, .contact .contact-container i {
+        font-size: 15px;
     }
     }
 /*media queries end*/
